@@ -1,0 +1,32 @@
+.hero{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.hero__img{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+}
+
+.hero__subtitle{
+    color: var(--clr-purple800);
+    font-size: var(--size-base);
+    line-height: 0.9;
+}
+
+.hero__title{
+    color: var(--clr-purple500);
+    text-transform: uppercase;
+    font-size: var(--size-4xl);
+    letter-spacing: -0.05rem;
+}
+
+.hero__description{
+    color: var(--clr-purple500);
+}

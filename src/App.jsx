@@ -3,6 +3,7 @@ import './styles/App.css'
 import './styles/index.css'
 import './styles/utils.css'
 import './styles/header.css'
+import './styles/hero.css'
 import handleDownload from './components/HandleDownload'
 
 function App() {
@@ -27,18 +28,30 @@ function App() {
               </button>
             </li>
             <li>
-              <Button className="header__resume" text="Download CV" onClick={handleDownload}/>
+              <Button className="header__resume" text="Download CV" onClick={handleDownload} />
             </li>
           </ul>
+          <button>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className='header__bars'>
+              <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+            </svg>
+
+          </button>
         </nav>
       </header>
-      {/* <main> */}
-      {/* <section></section> */}
-      {/* <section></section> */}
-      {/* <section></section> */}
-      {/* <section></section> */}
-      {/* <section></section> */}
-      {/* </main> */}
+      <main>
+        <section className="hero container">
+          <img className='hero__img' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
+          <h2 className="hero__subtitle">Olá, eu sou o João Eduardo</h2>
+          <h1 className="hero__title">Desenvolvedor FRONT-END</h1>
+          <p className="hero__description">Sou um aprendiz de front-end web, estudando HTML, CSS, JavaScript e React para criar interfaces modernas e responsivas.</p>
+          <Button text="Entre em contato" className="hero__btn" onClick={() => window.location.href = "#"}/>
+        </section>
+        {/* <section></section> */}
+        {/* <section></section> */}
+        {/* <section></section> */}
+        {/* <section></section> */}
+      </main>
       {/* <footer></footer> */}
     </>
 
