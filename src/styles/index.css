@@ -7,6 +7,7 @@
     --clr-purple950: oklch(0.291 0.149 302.717);
     --clr-red: oklch(0.637 0.237 25.331);
     --clr-blue: oklch(0.511 0.262 276.966);
+    --clr-pink: oklch(0.459 0.187 3.815);
 
     /*color red rgb(251, 44, 54)*/
     /*color blue rgb(79, 57, 246)*/
@@ -69,5 +70,5 @@ a {
 }
 
 strong {
-    color: var(--clr-blue);
+    color: var(--clr-white);
 }
