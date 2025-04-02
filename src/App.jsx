@@ -4,6 +4,7 @@ import './styles/index.css'
 import './styles/utils.css'
 import './styles/header.css'
 import './styles/hero.css'
+import './styles/sobre.css'
 import handleDownload from './components/HandleDownload'
 
 function App() {
@@ -43,11 +44,36 @@ function App() {
         <section className="hero container">
           <img className='hero__img' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
           <h2 className="hero__subtitle">Olá, eu sou o João Eduardo</h2>
-          <h1 className="hero__title">Desenvolvedor <br/> FRONT-END</h1>
+          <h1 className="hero__title">Desenvolvedor <br /> FRONT-END</h1>
           <p className="hero__description">Sou um aprendiz de <strong>front-end web</strong>, estudando <strong>HTML, CSS, JavaScript e React</strong>  para criar interfaces modernas e responsivas.</p>
-          <Button text="Entre em contato" className="hero__btn" onClick={() => window.location.href = "#"}/>
+          <Button text="Entre em contato" className="hero__btn" onClick={() => window.location.href = "#"} />
         </section>
-        {/* <section></section> */}
+        <section className='about container section'>
+          <div className='about__content'>
+            <h2 className='about__title'>Sobre</h2>
+            <p className='about__description'>
+              Olá me chamo João Eduardo, sou um desenvolvedor focado em <strong>front-end</strong>. Estudo Análise e Desenvolvimento de Sistemas na FACENS e gosto de criar interfaces interativas e funcionais. .
+            </p>
+            <p className='about__description'>
+              Apaixonado por <strong>tecnologia e videogames</strong>, sempre busco novas formas de aprimorar minhas habilidades
+            </p>
+            <hr className='about__line' />
+            <h3 className='about__tecs'>Tecnologias</h3>
+            <div className='about__list-container'>
+              <ul className='about__list'>
+                <li className='about__itens'>JavaScript</li>
+                <li className='about__itens'>HTML</li>
+              </ul>
+              <ul className='about__list'>
+                <li className='about__itens'>CSS</li>
+                <li className='about__itens'>React</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <img src='/eu-format.jpg' alt="imagem de perfil" />
+          </div>
+        </section>
         {/* <section></section> */}
         {/* <section></section> */}
         {/* <section></section> */}

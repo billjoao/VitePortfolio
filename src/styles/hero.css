@@ -21,7 +21,6 @@
 }
 
 .hero__title{
-    color: var(--clr-purple500);
     text-transform: uppercase;
     font-size: var(--size-4xl);
     letter-spacing: -0.05rem;
