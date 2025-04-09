@@ -4,6 +4,7 @@ import './styles/index.css'
 import './styles/utils.css'
 import './styles/header.css'
 import './styles/hero.css'
+import './styles/featured.css'
 import './styles/sobre.css'
 import handleDownload from './components/HandleDownload'
 
@@ -70,11 +71,31 @@ function App() {
               </ul>
             </div>
           </div>
-          <div>
-            <img src='/eu-format.jpg' alt="imagem de perfil" />
+          <div className='about__img-wrapper'>
+            <img className='about__image' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
           </div>
         </section>
-        {/* <section></section> */}
+        <section className='featured container section'>
+          <h3 className='featured__subtitle'>feito por mim</h3>
+          <div className='featured__wrapper'>
+          <h2 className='featured__title'>Projeto Google glass</h2>
+          <a className='featured__link' href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.353 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.354-1Z" clip-rule="evenodd" />
+          </svg>
+          </a>
+          </div>
+          <p className='featured__description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias reiciendis totam non quidem quia quibusdam laborum excepturi perferendis repellendus obcaecati consectetur placeat assumenda, asperiores quasi qui nostrum nemo commodi quisquam.</p>
+          <div>
+            <h3 className='featured__label'>TECNOLOGIAS</h3>
+            <ul className='featured__tech-stack'>
+              <li className='featured__info'>html</li>
+              <li className='featured__info'>css</li>
+              <li className='featured__info'>JavaScript</li>
+            </ul>
+          </div>
+          <div></div>
+          <div></div>
+        </section>
         {/* <section></section> */}
         {/* <section></section> */}
       </main>
