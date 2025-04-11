@@ -6,6 +6,7 @@ import './styles/header.css'
 import './styles/hero.css'
 import './styles/featured.css'
 import './styles/sobre.css'
+import './styles/work.css'
 import handleDownload from './components/HandleDownload'
 
 function App() {
@@ -104,21 +105,30 @@ function App() {
             </div>
           </div>
           <div className='featured__img-container'>
-          <div className='featured__img-wrapper'>
-            <img src="/featured1.jpg" alt="imagem do projeto" />
-          </div>
-          <div className='featured__img-wrapper'>
-            <img src="/featured2.jpg" alt="imagem do projeto" />
-          </div>
-          <div className='featured__img-wrapper'>
-            <img src="/featured3.jpg" alt="imagem do projeto" />
-          </div>
-          <div className='featured__img-wrapper'>
-            <img src="/featured4.jpg" alt="imagem do projeto" />
-          </div>
+            <div className='featured__img-wrapper'>
+              <img src="/featured1.jpg" alt="imagem do projeto" />
+            </div>
+            <div className='featured__img-wrapper'>
+              <img src="/featured2.jpg" alt="imagem do projeto" />
+            </div>
+            <div className='featured__img-wrapper'>
+              <img src="/featured3.jpg" alt="imagem do projeto" />
+            </div>
+            <div className='featured__img-wrapper'>
+              <img src="/featured4.jpg" alt="imagem do projeto" />
+            </div>
           </div>
         </section>
-        {/* <section></section> */}
+        <section className='work container section'>
+        <h2 className='work__title'>Projetos</h2>
+        <p className='work__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deleniti hic itaque in impedit minima magnam consectetur, doloribus dolore, labore repellat reprehenderit repudiandae illo perferendis ea qui, explicabo porro sunt!</p>
+        </section>
+        {/* Primeiro Projeto */}
+        <h3>Projeto 1</h3>
+        <img src="" alt="" />
+        <p></p>
+        <p></p>
+        <Button text='Git'/>
         {/* <section></section> */}
       </main>
       {/* <footer></footer> */}
