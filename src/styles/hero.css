@@ -15,7 +15,7 @@
 }
 
 .hero__subtitle{
-    color: var(--clr-purple800);
+    color: var(--clr-purple500);
     font-size: var(--size-base);
     line-height: 0.9;
 }
@@ -27,7 +27,7 @@
 }
 
 .hero__description{
-    color: var(--clr-purple500);
+    color: var(--clr-purple400);
     font-size: var(--size-sm);
 }
 

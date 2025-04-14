@@ -2,6 +2,7 @@
 
 :root {
     --clr-white: oklch(0.977 0.014 308.299);
+    --clr-purple400: oklch(71.4% 0.203 305.504);
     --clr-purple500: oklch(0.627 0.265 303.9);
     --clr-purple800: oklch(0.438 0.218 303.724);
     --clr-purple950: oklch(0.291 0.149 302.717);

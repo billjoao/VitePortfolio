@@ -120,15 +120,33 @@ function App() {
           </div>
         </section>
         <section className='work container section'>
-        <h2 className='work__title'>Projetos</h2>
-        <p className='work__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deleniti hic itaque in impedit minima magnam consectetur, doloribus dolore, labore repellat reprehenderit repudiandae illo perferendis ea qui, explicabo porro sunt!</p>
+          <h2 className='work__title'>Projetos</h2>
+          <p className='work__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deleniti hic itaque in impedit minima magnam consectetur, doloribus dolore, labore repellat reprehenderit repudiandae illo perferendis ea qui, explicabo porro sunt!</p>
+          <div className="work__container">
+            {/* Primeiro Projeto */}
+            <h3 className='work__project-title'>Portfolio 1.0</h3>
+            <div className='work__img-wrapper work__img1'>
+              <img src="/projeto1.png" alt="Portfolio 1.0" />
+            </div>
+            <div className='work__project work__content1'>
+            <h3 className='work__project-subtitle'>Portfolio 1.0</h3>
+              <p className='work__project-description1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus porro iste </p>
+              <p className='work__project-description2'>at harum ab pariatur tenetur eos labore in asperiores dolore voluptate aperiam eum quibusdam, explicabo vero, veritatis officiis ipsum.</p>
+              <Button text='Git' className='work__project-btn' />
+            </div>
+            {/* Segundo Projeto */}
+            <h3 className='work__project-title'>Costs</h3>
+            <div className='work__img-wrapper work__img2'>
+              <img src="/projeto2.png" alt="Costs" />
+            </div>
+            <div className='work__project work__content2'>
+              <h3 className='work__project-subtitle'>Costs</h3>
+              <p className='work__project-description1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus porro iste </p>
+              <p className='work__project-description2'>at harum ab pariatur tenetur eos labore in asperiores dolore voluptate aperiam eum quibusdam, explicabo vero, veritatis officiis ipsum.</p>
+              <Button text='Git' className='work__project-btn' />
+            </div>
+          </div>
         </section>
-        {/* Primeiro Projeto */}
-        <h3>Projeto 1</h3>
-        <img src="" alt="" />
-        <p></p>
-        <p></p>
-        <Button text='Git'/>
         {/* <section></section> */}
       </main>
       {/* <footer></footer> */}

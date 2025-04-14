@@ -22,7 +22,7 @@
 
 .featured__description {
     max-width: 60ch;
-    color: var(--clr-purple500);
+    color: var(--clr-purple400);
 }
 
 .featured__label {
@@ -37,7 +37,7 @@
 
 .featured__info{
     font-size: var(--size-sm);
-    color: var(--clr-purple500);
+    color: var(--clr-purple400);
     text-transform: capitalize;
     margin: 1rem 0;
 }

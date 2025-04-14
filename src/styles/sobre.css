@@ -16,7 +16,7 @@
 }
 
 .about__description {
-    color: var(--clr-purple500);
+    color: var(--clr-purple400);
     max-width: 60ch;
     font-size: var(--size-sm);
 }
@@ -36,7 +36,7 @@
 
 .about__itens {
     font-size: var(--size-sm);
-    color: var(--clr-purple500);
+    color: var(--clr-purple400);
 }
 
 .about__itens::before {
@@ -50,7 +50,7 @@
 }
 
 .about__line {
-    border-color: var(--clr-purple500);
+    border-color: var(--clr-purple400);
 }
 
 /*xs*/

@@ -38,7 +38,7 @@
     .header__link{
         font-size: var(--size-xs);
         font-weight: 600;
-        color: var(--clr-purple500);
+        color: var(--clr-purple400);
         transition: color 0.3s;
     }
     
@@ -47,13 +47,13 @@
     }
     
     .header__line{
-        border: 1px solid var(--clr-purple500);
+        border: 1px solid var(--clr-purple400);
         padding-top: 1.5rem;
     }
     
     .header__sun{
         display: block;
-        color: var(--clr-purple500);
+        color: var(--clr-purple400);
         width: var(--size-base);
         height: var(--size-base);
     }
