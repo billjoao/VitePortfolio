@@ -7,6 +7,8 @@ import './styles/hero.css'
 import './styles/featured.css'
 import './styles/sobre.css'
 import './styles/work.css'
+import './styles/contact.css'
+import './styles/footer.css'
 import handleDownload from './components/HandleDownload'
 
 function App() {
@@ -129,7 +131,7 @@ function App() {
               <img src="/projeto1.png" alt="Portfolio 1.0" />
             </div>
             <div className='work__project work__content1'>
-            <h3 className='work__project-subtitle'>Portfolio 1.0</h3>
+              <h3 className='work__project-subtitle'>Portfolio 1.0</h3>
               <p className='work__project-description1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus porro iste </p>
               <p className='work__project-description2'>at harum ab pariatur tenetur eos labore in asperiores dolore voluptate aperiam eum quibusdam, explicabo vero, veritatis officiis ipsum.</p>
               <Button text='Git' className='work__project-btn' />
@@ -147,9 +149,20 @@ function App() {
             </div>
           </div>
         </section>
-        {/* <section></section> */}
+        <section className='contact container section'>
+          <h2 className='contact__title'>entre em contato</h2>
+          <p className='contact__description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad repudiandae nobis quidem perferendis nihil atque iusto id eaque illo dolore? Inventore at dolores, expedita nihil eveniet dicta molestiae labore doloremque.</p>
+          <Button
+            text="entre em contato"
+            className="contact__btn"
+            onClick={() => window.location.href = "mailto:joao.eduardo0418@hotmail.com"}
+          />
+
+        </section>
       </main>
-      {/* <footer></footer> */}
+      <footer className='footer section container'>
+        <h3 className='footer__title'>~ João Eduardo ~</h3>
+      </footer>
     </>
 
   )
