@@ -1,0 +1,14 @@
+.mobile-nav {
+    position: absolute;
+    border: 1px solid red;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-purple950);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

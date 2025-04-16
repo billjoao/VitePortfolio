@@ -9,6 +9,7 @@ import './styles/sobre.css'
 import './styles/work.css'
 import './styles/contact.css'
 import './styles/footer.css'
+import './styles/mobile-nav.css'
 import handleDownload from './components/HandleDownload'
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
       <header className='header container'>
         <nav>
           <ul className='header__menu'>
-            <li><a className='header__link' href="#sobre">Sobre</a></li>
+            <li><a className='header__link' href="#about">Sobre</a></li>
             <li><a className='header__link' href="#featured">Featured</a></li>
-            <li><a className='header__link' href="#contato">Contato</a></li>
+            <li><a className='header__link' href="#contact">Contato</a></li>
             <li className='header__line'></li>
             <li>
               <button className='header__sun'>
@@ -44,6 +45,36 @@ function App() {
           </button>
         </nav>
       </header>
+      {/* Mobile Nav */}
+      <div className='mobile-nav'>
+        <nav>
+          <ul className='mobile-nav__menu'>
+            <li>
+              <a className='mobile-nav__link' href="#about">Sobre</a>
+            </li>
+            <li>
+              <a className='mobile-nav__link' href="#featured">Projetos</a>
+            </li>
+            <li>
+              <a className='mobile-nav__link' href="#contact">Contatos</a>
+            </li>
+            <li className='mobile-nav__link-line'></li>
+            <li>
+              <button className='mobile-nav__sun'>
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                  <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                </svg>
+
+              </button>
+            </li>
+            <li>
+            <Button className="mobile-nav__link-resume" text="Download CV" onClick={handleDownload} />
+            </li>
+          </ul>
+        </nav>
+      </div>
+      {/* End of Mobile Nav */}
       <main>
         <section className="hero container">
           <img className='hero__img' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
@@ -52,7 +83,7 @@ function App() {
           <p className="hero__description">Sou um aprendiz de <strong>front-end web</strong>, estudando <strong>HTML, CSS, JavaScript e React</strong>  para criar interfaces modernas e responsivas.</p>
           <Button text="Entre em contato" className="hero__btn" onClick={() => window.location.href = "#"} />
         </section>
-        <section className='about container section'>
+        <section id='about' className='about container section'>
           <div className='about__content'>
             <h2 className='about__title'>Sobre</h2>
             <p className='about__description'>
@@ -78,7 +109,7 @@ function App() {
             <img className='about__image' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
           </div>
         </section>
-        <section className='featured container section'>
+        <section id='featured' className='featured container section'>
           <h3 className='featured__subtitle'>feito por mim</h3>
           <div className='featured__wrapper'>
             <h2 className='featured__title'>Projeto Google glass</h2>
@@ -149,7 +180,7 @@ function App() {
             </div>
           </div>
         </section>
-        <section className='contact container section'>
+        <section id='contact' className='contact container section'>
           <h2 className='contact__title'>entre em contato</h2>
           <p className='contact__description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad repudiandae nobis quidem perferendis nihil atque iusto id eaque illo dolore? Inventore at dolores, expedita nihil eveniet dicta molestiae labore doloremque.</p>
           <Button
