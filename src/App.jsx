@@ -10,9 +10,17 @@ import './styles/work.css'
 import './styles/contact.css'
 import './styles/footer.css'
 import './styles/mobile-nav.css'
+import { useState } from 'react'
 import handleDownload from './components/HandleDownload'
 
 function App() {
+
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+
+  const ToggleMobileNav = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+    document.body.style.overflowY = !isMobileNavOpen ? 'hidden' : 'auto'
+  }
 
   return (
 
@@ -37,7 +45,7 @@ function App() {
               <Button className="header__resume" text="Download CV" onClick={handleDownload} />
             </li>
           </ul>
-          <button>
+          <button onClick={ToggleMobileNav} >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className='header__bars'>
               <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
             </svg>
@@ -46,16 +54,25 @@ function App() {
         </nav>
       </header>
       {/* Mobile Nav */}
-      <div className='mobile-nav'>
+      <div className='mobile-nav' style={{ display: isMobileNavOpen ? 'flex' : 'none' }}>
         <nav>
           <ul className='mobile-nav__menu'>
-            <li>
-              <a className='mobile-nav__link' href="#about">Sobre</a>
+            <li onClick={() => {
+              setIsMobileNavOpen(false);
+              document.body.style.overflowY = 'auto';
+            }}>
+              <a className='mobile-nav__link' href="#about" >Sobre</a>
             </li>
-            <li>
+            <li onClick={() => {
+              setIsMobileNavOpen(false);
+              document.body.style.overflowY = 'auto';
+            }}>
               <a className='mobile-nav__link' href="#featured">Projetos</a>
             </li>
-            <li>
+            <li onClick={() => {
+              setIsMobileNavOpen(false);
+              document.body.style.overflowY = 'auto';
+            }}>
               <a className='mobile-nav__link' href="#contact">Contatos</a>
             </li>
             <li className='mobile-nav__link-line'></li>
@@ -69,7 +86,7 @@ function App() {
               </button>
             </li>
             <li>
-            <Button className="mobile-nav__link-resume" text="Download CV" onClick={handleDownload} />
+              <Button className="mobile-nav__link-resume" text="Download CV" onClick={handleDownload} />
             </li>
           </ul>
         </nav>
