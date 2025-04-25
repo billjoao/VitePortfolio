@@ -10,12 +10,21 @@ import './styles/work.css'
 import './styles/contact.css'
 import './styles/footer.css'
 import './styles/mobile-nav.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import handleDownload from './components/HandleDownload'
 
 function App() {
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
+  const [isLightMode, setIsLightMode] = useState(false)
+
+  useEffect(() => {
+    document.body.classList.toggle('light-mode', isLightMode)
+  }, [isLightMode])
+
+  const handleThemeToggle = () => {
+    setIsLightMode(prev => !prev)
+  }
 
   const ToggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
@@ -33,7 +42,7 @@ function App() {
             <li><a className='header__link' href="#contact">Contato</a></li>
             <li className='header__line'></li>
             <li>
-              <button className='header__sun'>
+              <button onClick={handleThemeToggle} className='header__sun'>
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
                   <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
@@ -77,7 +86,7 @@ function App() {
             </li>
             <li className='mobile-nav__link-line'></li>
             <li>
-              <button className='mobile-nav__sun'>
+              <button onClick={handleThemeToggle} className='mobile-nav__sun'>
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
                   <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
@@ -94,7 +103,7 @@ function App() {
       {/* End of Mobile Nav */}
       <main>
         <section className="hero container">
-          <img className='hero__img' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
+          <img loading='lazy' className='hero__img' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
           <h2 className="hero__subtitle">Olá, eu sou o João Eduardo</h2>
           <h1 className="hero__title">Desenvolvedor <br /> FRONT-END</h1>
           <p className="hero__description">Sou um aprendiz de <strong>front-end web</strong>, estudando <strong>HTML, CSS, JavaScript e React</strong>  para criar interfaces modernas e responsivas.</p>
@@ -123,7 +132,7 @@ function App() {
             </div>
           </div>
           <div className='about__img-wrapper'>
-            <img className='about__image' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
+            <img loading='lazy' className='about__image' src='/eu-formatado-quadrado.jpg' alt="imagem de perfil" />
           </div>
         </section>
         <section id='featured' className='featured container section'>
@@ -135,7 +144,7 @@ function App() {
             </svg>
             </a>
           </div>
-          <p className='featured__description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias reiciendis totam non quidem quia quibusdam laborum excepturi perferendis repellendus obcaecati consectetur placeat assumenda, asperiores quasi qui nostrum nemo commodi quisquam.</p>
+          <p className='featured__description'>Este foi o meu primeiro projeto, desenvolvido enquanto acompanhava o curso <strong>“Curso em Vídeo”</strong>, ministrado por <strong>Gustavo Guanabara</strong> no YouTube.</p>
           <div className='featured__info-container'>
             <div>
               <h3 className='featured__label'>TECNOLOGIAS</h3>
@@ -146,60 +155,60 @@ function App() {
               </ul>
             </div>
             <div>
-              <h3 className='featured__label'>Tipo de projeto</h3>
+              <h3 className='featured__label'>Nome do projeto</h3>
               <p className='featured__info'> Google Glass</p>
             </div>
             <div>
-              <h3 className='featured__label'>Linha do tempo</h3>
-              <p className='featured__info'>dezembmro 2023 - presente</p>
+              <h3 className='featured__label'>Periodo de realização</h3>
+              <p className='featured__info'>outubro 2023 - dezembro 2023</p>
             </div>
           </div>
           <div className='featured__img-container'>
             <div className='featured__img-wrapper'>
-              <img src="/featured1.jpg" alt="imagem do projeto" />
+              <img loading='lazy' src="/featured1.jpg" alt="imagem do projeto" />
             </div>
             <div className='featured__img-wrapper'>
-              <img src="/featured2.jpg" alt="imagem do projeto" />
+              <img loading='lazy' src="/featured2.jpg" alt="imagem do projeto" />
             </div>
             <div className='featured__img-wrapper'>
-              <img src="/featured3.jpg" alt="imagem do projeto" />
+              <img loading='lazy' src="/featured3.jpg" alt="imagem do projeto" />
             </div>
             <div className='featured__img-wrapper'>
-              <img src="/featured4.jpg" alt="imagem do projeto" />
+              <img loading='lazy' src="/featured4.jpg" alt="imagem do projeto" />
             </div>
           </div>
         </section>
         <section className='work container section'>
           <h2 className='work__title'>Projetos</h2>
-          <p className='work__description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deleniti hic itaque in impedit minima magnam consectetur, doloribus dolore, labore repellat reprehenderit repudiandae illo perferendis ea qui, explicabo porro sunt!</p>
+          <p className='work__description'>Todos os projetos realizados por mim a fim de aprimorar minhas habilidades no <strong>Front-end</strong></p>
           <div className="work__container">
             {/* Primeiro Projeto */}
             <h3 className='work__project-title'>Portfolio 1.0</h3>
             <div className='work__img-wrapper work__img1'>
-              <img src="/projeto1.png" alt="Portfolio 1.0" />
+              <img loading='lazy' src="/projeto1.png" alt="Portfolio 1.0" />
             </div>
             <div className='work__project work__content1'>
               <h3 className='work__project-subtitle'>Portfolio 1.0</h3>
-              <p className='work__project-description1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus porro iste </p>
-              <p className='work__project-description2'>at harum ab pariatur tenetur eos labore in asperiores dolore voluptate aperiam eum quibusdam, explicabo vero, veritatis officiis ipsum.</p>
-              <Button text='Git' className='work__project-btn' />
+              <p className='work__project-description1'>Minha primeira versão do meu <strong>Portfolio Web</strong> </p>
+              <p className='work__project-description2'>Produzi esse projeto utilizando arquivos puros de <strong>HTML, CSS e Javascript</strong></p>
+              <Button text='Git' href="https://github.com/billjoao/Portfolio.git" className='work__project-btn' />
             </div>
             {/* Segundo Projeto */}
             <h3 className='work__project-title'>Costs</h3>
             <div className='work__img-wrapper work__img2'>
-              <img src="/projeto2.png" alt="Costs" />
+              <img loading='lazy' src="/projeto2.png" alt="Costs" />
             </div>
             <div className='work__project work__content2'>
               <h3 className='work__project-subtitle'>Costs</h3>
-              <p className='work__project-description1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus porro iste </p>
-              <p className='work__project-description2'>at harum ab pariatur tenetur eos labore in asperiores dolore voluptate aperiam eum quibusdam, explicabo vero, veritatis officiis ipsum.</p>
-              <Button text='Git' className='work__project-btn' />
+              <p className='work__project-description1'>Meu primeiro projeto feito utilizando o <strong>React</strong></p>
+              <p className='work__project-description2'>Realizei esse projeto acompanhando o curso de <strong>"Hora de Codar"</strong> no Youtube</p>
+              <Button text='Git' href="https://github.com/billjoao/costs.git" className='work__project-btn' />
             </div>
           </div>
         </section>
         <section id='contact' className='contact container section'>
           <h2 className='contact__title'>entre em contato</h2>
-          <p className='contact__description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad repudiandae nobis quidem perferendis nihil atque iusto id eaque illo dolore? Inventore at dolores, expedita nihil eveniet dicta molestiae labore doloremque.</p>
+          <p className='contact__description'>mande um <strong>E-mail</strong>  para mim para que possamos negociar propostas</p>
           <Button
             text="entre em contato"
             className="contact__btn"

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 :root {
+    --clr-strong: white;
     --clr-white: oklch(0.977 0.014 308.299);
     --clr-purple400: oklch(71.4% 0.203 305.504);
     --clr-purple500: oklch(0.627 0.265 303.9);
@@ -40,6 +41,16 @@ html {
     scroll-behavior: smooth;
 }
 
+.light-mode {
+    --clr-white: oklch(0.1 0 0); /* texto escuro */
+    --clr-strong: oklch(0.291 0.149 302.717); 
+    --clr-purple400: oklch(0.14 0.0395 305.504); /*escrita mais escura*/
+    --clr-purple500: oklch(0.1 0.0197 305.504);/**/
+    --clr-purple800: oklch(0.9 0.05 305.504);
+    --clr-purple950: oklch(0.98 0.01 302.717); /* fundo claro */
+}
+    
+
 body {
     font-family: "M PLUS Rounded 1c", sans-serif;
     background-color: var(--clr-purple950);
@@ -71,5 +82,20 @@ a {
 }
 
 strong {
-    color: var(--clr-white);
+    color: var(--clr-strong);
 }
+
+/* scroll bar */
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--clr-purple400);
+    outline: 1px solid var(--clr-purple500);
+  }
