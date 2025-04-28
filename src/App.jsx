@@ -107,7 +107,7 @@ function App() {
           <h2 className="hero__subtitle">Olá, eu sou o João Eduardo</h2>
           <h1 className="hero__title">Desenvolvedor <br /> FRONT-END</h1>
           <p className="hero__description">Sou um aprendiz de <strong>front-end web</strong>, estudando <strong>HTML, CSS, JavaScript e React</strong>  para criar interfaces modernas e responsivas.</p>
-          <Button text="Entre em contato" className="hero__btn" onClick={() => window.location.href = "#"} />
+          <Button text="Github" className="hero__btn" href='https://github.com/billjoao' />
         </section>
         <section id='about' className='about container section'>
           <div className='about__content'>
