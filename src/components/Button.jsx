@@ -1,7 +1,7 @@
 import styles from '../styles/button.module.css'
 
 function Button({ text, onClick, className, href }) {
-    // Se houver href, renderiza como link
+    
     if (href) {
         return (
             <a
@@ -15,7 +15,7 @@ function Button({ text, onClick, className, href }) {
         )
     }
 
-    // Senão, renderiza como botão comum
+    
     return (
         <button onClick={onClick} className={`${styles.button} ${className}`}>
             {text}
